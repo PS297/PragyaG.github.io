@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="site-title">Your Name <span>PhD</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a><a href="research.html">Research</a>
+        <a href="publications.html">Publications</a><a href="resources.html">Resources</a>
+        <a href="education.html">Education</a><a href="awards.html">Awards</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="burger" id="burger">&#9776;</button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a><a href="research.html">Research</a>
+    <a href="publications.html">Publications</a><a href="resources.html">Resources</a>
+    <a href="education.html">Education</a><a href="awards.html">Awards</a><a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> › Contact</div>
+      <h1>Contact</h1>
+      <p>I am happy to discuss collaborations, answer questions, or connect for mentorship.</p>
+    </div>
+  </div>
+
+  <main class="page-single">
+
+    <div class="card">
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <h3>Get in touch</h3>
+          <p style="font-size:.88rem;color:var(--ink2);line-height:1.8;margin-bottom:1.2rem;">
+            The best way to reach me is by email. I aim to respond within 48 hours on working days.
+            I am open to research collaborations, peer review invitations, speaking engagements, and mentorship.
+          </p>
+          <div class="ci-row">
+            <div class="ci-icon">✉</div>
+            <div class="ci-text"><a href="mailto:you@university.edu">you@university.edu</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="ci-icon">🏛</div>
+            <div class="ci-text">Room [Number], [Building Name]<br>Your University, City, Country</div>
+          </div>
+          <div class="ci-row">
+            <div class="ci-icon">🎓</div>
+            <div class="ci-text"><a href="https://scholar.google.com" target="_blank">Google Scholar Profile</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="ci-icon">💼</div>
+            <div class="ci-text"><a href="https://linkedin.com" target="_blank">LinkedIn</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="ci-icon">⌨</div>
+            <div class="ci-text"><a href="https://github.com" target="_blank">GitHub</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="ci-icon">𝕏</div>
+            <div class="ci-text"><a href="https://twitter.com" target="_blank">Twitter / X</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="ci-icon">📄</div>
+            <div class="ci-text"><a href="resume.pdf">Download CV / Resume</a></div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Send a message</h3>
+          <div class="fg"><label>Your Name</label><input type="text" placeholder="Full name"/></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+          <div class="fg"><label>Subject</label>
+            <select>
+              <option>Research Collaboration</option>
+              <option>General Question</option>
+              <option>Speaking Invitation</option>
+              <option>Mentorship</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message</label><textarea placeholder="Write your message..."></textarea></div>
+          <button class="form-submit" id="sendBtn">Send Message</button>
+          <p style="font-size:.75rem;color:var(--ink3);margin-top:.8rem;line-height:1.6;">
+            💡 To make this form send real emails, sign up free at <a href="https://formspree.io" target="_blank">formspree.io</a> and add your endpoint as the form action.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2025 Your Name · <a href="index.html">Home</a></span>
+      <span>Built with GitHub Pages</span>
+    </div>
+  </footer>
+  <script src="nav.js"></script>
+  <script>
+    document.getElementById('sendBtn').addEventListener('click', () => {
+      alert('Form submitted! Connect to Formspree to make this send real emails.');
+    });
+  </script>
+</body>
+</html>
