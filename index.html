@@ -106,11 +106,13 @@
               </div>
             </div>
             <div class="gif-slot">
-              <div class="gif-placeholder">
-                <div class="gif-icon">🎞</div>
-                <p>research2.jpg</p>
-                <span>Replace with your image or GIF</span>
-              </div>
+            <img src="research2.jpg" class="gif-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          
+            <div class="gif-placeholder" style="display:none;">
+              <div class="gif-icon">🎞</div>
+              <p>research2.jpg</p>
+              <span>Replace with your image or GIF</span>
             </div>
           </div>
           <p class="img-hint">💡 <strong>How to add images/GIFs:</strong> Upload your file to GitHub alongside <code>index.html</code>, then replace <code>research1.gif</code> with your filename in the HTML.</p>
