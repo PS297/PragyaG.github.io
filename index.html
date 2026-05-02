@@ -102,11 +102,24 @@
           <div class="gif-grid">
         
             <!-- Slot 1 -->
-            <div class="gif-slot">
+            <!--div class="gif-slot">
               <div class="gif-placeholder">
                 <div class="gif-icon">🖼</div>
                 <p>research1.gif / .jpg / .png</p>
                 <span>Replace with your image or GIF</span>
+              </div>
+            </div>-->
+            <div class="gif-slot">
+              <video class="gif-video"
+                     autoplay muted loop playsinline
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <source src="research1.mp4" type="video/mp4">
+              </video>
+            
+              <div class="gif-placeholder" style="display:none;">
+                <div class="gif-icon">🖼</div>
+                <p>research1.mp4</p>
+                <span>Video not found</span>
               </div>
             </div>
         
