@@ -99,17 +99,19 @@
             Upload a GIF or image that visually demonstrates your research — e.g. a simulation, scan, animation, or result figure.
           </p>
         
-          <div class="gif-grid">
+          <div class="gif-slot">
+              <img src="research2.jpeg" alt="Research visual" class="gif-img"
+       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         
-            <!-- Slot 1 -->
-            <!--div class="gif-slot">
-              <div class="gif-placeholder">
-                <div class="gif-icon">🖼</div>
-                <p>research1.gif / .jpg / .png</p>
-                <span>Replace with your image or GIF</span>
+              <div class="gif-placeholder" style="display:none;">
+                <div class="gif-icon">🎞</div>
+                <p>research1.jpg</p>
+                <span>Novel unsupervised method for retinal vascular segmentation by Bonferroni mean pre-aggregation operator assisted dynamic fuzzy histogram equalization, enabling the extraction of vascular feature by fusing color channels to preserve the geometrical properties of vessel structure during the segmentation process and identifying small vessels in the low-contrast region.</span>
               </div>
-            </div>-->
-            <div class="gif-slot">
+            </div>
+        
+          </div> <!-- ✅ properly closed gif-grid --> do changes here
+            <!--div class="gif-slot">
               <video class="gif-video"
                      autoplay muted loop playsinline
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -121,7 +123,7 @@
                 <p>research1.mp4</p>
                 <span>Video not found</span>
               </div>
-            </div>
+            </div>-->
         
             <!-- Slot 2 -->
             <div class="gif-slot">
