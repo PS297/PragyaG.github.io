@@ -99,45 +99,35 @@
             Upload a GIF or image that visually demonstrates your research — e.g. a simulation, scan, animation, or result figure.
           </p>
         
-          <div class="gif-slot">
-              <img src="research2.jpeg" alt="Research visual" class="gif-img"
-       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        
+          <div class="gif-grid">
+
+            <!-- Slot 1 -->
+            <div class="gif-slot">
+              <img src="research1.jpg" alt="Research visual 1" class="gif-img"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          
               <div class="gif-placeholder" style="display:none;">
                 <div class="gif-icon">🎞</div>
                 <p>research1.jpg</p>
-                <span>Novel unsupervised method for retinal vascular segmentation by Bonferroni mean pre-aggregation operator assisted dynamic fuzzy histogram equalization, enabling the extraction of vascular feature by fusing color channels to preserve the geometrical properties of vessel structure during the segmentation process and identifying small vessels in the low-contrast region.</span>
+                <span>
+                  Novel unsupervised method for retinal vascular segmentation using Bonferroni mean pre-aggregation and dynamic fuzzy histogram equalization, enabling accurate extraction of small vessels in low-contrast regions.
+                </span>
               </div>
             </div>
-        
-          </div> <!-- ✅ properly closed gif-grid --> do changes here
-            <!--div class="gif-slot">
-              <video class="gif-video"
-                     autoplay muted loop playsinline
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <source src="research1.mp4" type="video/mp4">
-              </video>
-            
-              <div class="gif-placeholder" style="display:none;">
-                <div class="gif-icon">🖼</div>
-                <p>research1.mp4</p>
-                <span>Video not found</span>
-              </div>
-            </div>-->
-        
+          
             <!-- Slot 2 -->
             <div class="gif-slot">
-              <img src="research2.jpeg" alt="Research visual" class="gif-img"
-       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        
+              <img src="research2.jpeg" alt="Research visual 2" class="gif-img"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          
               <div class="gif-placeholder" style="display:none;">
                 <div class="gif-icon">🎞</div>
                 <p>research2.jpeg</p>
                 <span>Replace with your image or GIF</span>
               </div>
             </div>
-        
-          </div> <!-- ✅ properly closed gif-grid --> do changes here
+          
+          </div> <!-- ✅ ONLY ONE closing gif-grid -->
         
           <p class="img-hint">
             💡 <strong>How to add images/GIFs:</strong>
