@@ -471,3 +471,53 @@ img { max-width: 100%; height: auto; display: block; }
   .header-inner { padding: 0 1rem; }
   .hero-banner { padding: 2rem 1rem; }
 }
+/* ================= RUNNING NEWS ================= */
+
+.news-wrapper {
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-scroll {
+  display: flex;
+  flex-direction: column;
+  animation: scrollNews 18s linear infinite;
+}
+
+.news-scroll:hover {
+  animation-play-state: paused;
+}
+
+.news-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.news-date {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0a66c2;
+  margin-bottom: 6px;
+}
+
+.news-item p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+@keyframes scrollNews {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+
+
+
