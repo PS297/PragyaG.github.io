@@ -33,7 +33,7 @@
     <div class="page-hero-inner">
       <div class="breadcrumb"><a href="index.html">Home</a> › Research</div>
       <h1>Research</h1>
-      <p>Ongoing and completed research projects, themes, and collaborations.</p>
+      <p>Ongoing and completed research projects, and collaborations.</p>
     </div>
   </div>
 
@@ -88,23 +88,37 @@
         </div>
         <!-- Image/GIF for this area -->
         <div class="ra-media">
-          <div class="ra-media-slot">
-            <!-- <img src="research_area1_fig1.gif" alt="Figure 1"> -->
-            <div class="gif-placeholder">
-              <div class="gif-icon">🖼</div>
-              <p style="font-size:.72rem;font-family:monospace;color:var(--ink3);">area1_fig1.gif</p>
-            </div>
+
+        <div class="compare-container">
+      
+          <!-- Label -->
+          <span class="compare-label left">Original</span>
+          <span class="compare-label right">Segmented</span>
+      
+          <!-- Original Image -->
+          <img src="Retinal_1.png" alt="Original Image">
+      
+          <!-- Segmented Overlay -->
+          <div class="compare-overlay">
+            <img src="Retinal_2.png" alt="Segmented Image">
           </div>
-          <div class="ra-media-slot">
-            <!-- <img src="research_area1_fig2.png" alt="Figure 2"> -->
-            <div class="gif-placeholder">
-              <div class="gif-icon">📊</div>
-              <p style="font-size:.72rem;font-family:monospace;color:var(--ink3);">area1_fig2.png</p>
-            </div>
-          </div>
+      
+          <!-- Slider -->
+          <input 
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="compare-slider"
+          >
+      
         </div>
-        <p class="img-hint">💡 Replace placeholders above with your actual figures, GIFs or animations.</p>
+      
       </div>
+      
+      <p class="img-hint">
+        💡 Drag the slider to compare original and segmented outputs.
+      </p>
 
       <div class="research-area">
         <div class="ra-header">
