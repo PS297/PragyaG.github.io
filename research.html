@@ -87,28 +87,36 @@
             segmentation and usefulness for the diagnosis of retinal disorders.</p>
         </div>
         <!-- Image/GIF for this area -->
+        <script>
+        const slider = document.querySelector(".compare-slider");
+        const overlay = document.querySelector(".compare-overlay");
+        
+        slider.addEventListener("input", () => {
+          overlay.style.width = slider.value + "%";
+        });
+        </script>
         <div class="ra-media">
 
         <div class="compare-container">
       
-          <!-- Label -->
+          <!-- LABELS -->
           <span class="compare-label left">Original</span>
           <span class="compare-label right">Segmented</span>
       
-          <!-- Original Image -->
-          <img src="Retinal_1.png" alt="Original Image">
+          <!-- ORIGINAL IMAGE -->
+          <img src="Retinal_1.png" alt="Original">
       
-          <!-- Segmented Overlay -->
+          <!-- SEGMENTED OVERLAY -->
           <div class="compare-overlay">
-            <img src="Retinal_2.png" alt="Segmented Image">
+            <img src="Retinal_2.png" alt="Segmented">
           </div>
       
-          <!-- Slider -->
-          <input 
+          <!-- SLIDER -->
+          <input
             type="range"
             min="0"
             max="100"
-            value="50"
+            value="0"
             class="compare-slider"
           >
       
@@ -117,7 +125,7 @@
       </div>
       
       <p class="img-hint">
-        💡 Drag the slider to compare original and segmented outputs.
+        💡 Drag the slider to reveal the segmented result.
       </p>
 
       <div class="research-area">
