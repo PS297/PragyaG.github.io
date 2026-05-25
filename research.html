@@ -86,9 +86,11 @@
             feature intensity information. The results were validated by ophthalmologists for the accuracy of the vessel 
             segmentation and usefulness for the diagnosis of retinal disorders.</p>
         </div>
-        <!-- Image/GIF for this area -->
-        <div class="compare-container">
+        
+        <!-- ================= COMPARISON SECTION ================= -->
 
+      <div class="compare-container">
+      
         <!-- ORIGINAL IMAGE -->
         <img
           src="Original.jpg"
@@ -101,13 +103,23 @@
           <img
             src="segmented.jpg"
             class="compare-img"
-            alt="Segmented"
+            alt="Segmented Fundus"
           >
         </div>
       
+        <!-- MOVING DIVIDER -->
+        <div class="compare-divider" id="divider">
+          <div class="compare-handle">⇆</div>
+        </div>
+      
         <!-- LABELS -->
-        <span class="compare-label left">Original</span>
-        <span class="compare-label right">Segmented</span>
+        <div class="compare-badge left">
+          Original Fundus
+        </div>
+      
+        <div class="compare-badge right">
+          Segmented Vasculature
+        </div>
       
         <!-- SLIDER -->
         <input
@@ -121,18 +133,36 @@
       
       </div>
       
-      <p class="img-hint">
-        💡 Drag the slider to compare original and segmented image.
+      <!-- CAPTION -->
+      <p class="compare-caption">
+        Figure: Comparison between the original retinal fundus image and the segmented vascular structure generated using the proposed BMPDFHESeg framework.
       </p>
       
+      <!-- HINT -->
+      <p class="img-hint">
+        💡 Drag the slider to compare original and segmented retinal images.
+      </p>
+      
+      <!-- ================= JAVASCRIPT ================= -->
+      
       <script>
+      
       const slider = document.getElementById("slider");
       const overlay = document.getElementById("overlay");
+      const divider = document.getElementById("divider");
       
       slider.addEventListener("input", function () {
+      
           overlay.style.width = this.value + "%";
+      
+          divider.style.left = this.value + "%";
       });
+      
       </script>
+
+
+
+        
 
       <div class="research-area">
         <div class="ra-header">
