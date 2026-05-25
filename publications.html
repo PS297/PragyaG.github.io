@@ -41,11 +41,11 @@
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
         <div class="pub-filter">
-          <button class="pf-btn on">All</button>
-          <button class="pf-btn">Journal</button>
-          <button class="pf-btn">Conference</button>
-          <button class="pf-btn">Preprint</button>
-        </div>
+        <button class="pf-btn on" data-filter="all">All</button>
+        <button class="pf-btn" data-filter="journal">Journal</button>
+        <button class="pf-btn" data-filter="conference">Conference</button>
+        <button class="pf-btn" data-filter="preprint">Preprint</button>
+      </div>
         <a href="https://scholar.google.com/citations?user=7JO9yAkAAAAJ&hl=en" target="_blank" style="font-size:.82rem;color:var(--teal);">View on Google Scholar ↗</a>
       </div>
 
@@ -59,7 +59,7 @@
       <div class="pub-year-section">
         <div class="pub-year-label">2026</div>
 
-        <div class="pub-entry journal">
+        <div class="pub-entry" data-type="journal">
           <div class="pub-thumb-slot">
             <img src="paper1.jpg" alt="Paper 1" class="pub-thumb",onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"> 
             <div class="pub-thumb-placeholder" style="display:none;">
@@ -99,7 +99,7 @@
       <div class="pub-year-section">
         <div class="pub-year-label">2025</div>
 
-        <div class="pub-entry conference">
+       <div class="pub-entry" data-type="conference">
           <div class="pub-thumb-slot">
             <img src="paper2.jpg" alt="Paper 2",onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="pub-thumb-placeholder" style="display:none;"><span>📄</span><span>paper2.jpg</span></div>
@@ -128,7 +128,7 @@ Automated Learning (IDEAL 2025)</em></div>
           </div>
         </div>
 
-        <div class="pub-entry journal">
+        <div class="pub-entry" data-type="journal">
           <div class="pub-thumb-slot">
             <img src="paper3.jpg" alt="Paper 3",onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="pub-thumb-placeholder" style="display:none;"><span>📄</span><span>paper3.jpg</span></div>
@@ -164,7 +164,7 @@ Automated Learning (IDEAL 2025)</em></div>
       <div class="pub-year-section">
         <div class="pub-year-label">2024</div>
 
-        <div class="pub-entry conference">
+        <div class="pub-entry" data-type="conference">
           <div class="pub-thumb-slot">
             <img src="paper4.jpg" alt="Paper 4",onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="pub-thumb-placeholder" style="display:none;"><span>📄</span><span>paper4.jpg</span></div>
@@ -196,7 +196,7 @@ Automated Learning (IDEAL 2025)</em></div>
       <div class="pub-year-section">
         <div class="pub-year-label">2023</div>
 
-        <div class="pub-entry conference">
+        <div class="pub-entry" data-type="conference">
           <div class="pub-thumb-slot">
             <img src="paper5.jpg" alt="Paper 5",onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="pub-thumb-placeholder" style="display:none;"><span>📄</span><span>paper5.jpg</span></div>
@@ -224,7 +224,7 @@ Automated Learning (IDEAL 2025)</em></div>
             </div>
           </div>
           </div>
-          <div class="pub-entry conference">
+          <div class="pub-entry" data-type="conference">
           <div class="pub-thumb-slot">
             <img src="paper6.jpg" alt="Paper 6",onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="pub-thumb-placeholder" style="display:none;"><span>📄</span><span>paper6.jpg</span></div>
@@ -259,7 +259,7 @@ Automated Learning (IDEAL 2025)</em></div>
       <div class="pub-year-section">
         <div class="pub-year-label">2022</div>
 
-        <div class="pub-entry journal">
+        <div class="pub-entry" data-type="journal">
           <div class="pub-thumb-slot">
             <img src="paper7.jpg" alt="Paper 7" class="pub-thumb",onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"> 
             <div class="pub-thumb-placeholder" style="display:none;">
@@ -328,36 +328,30 @@ document.querySelectorAll(".abstract-toggle").forEach(button => {
    PUBLICATION FILTER
 ========================= */
 
-const filterButtons =
-  document.querySelectorAll(".pf-btn");
+<script>
 
-const publications =
-  document.querySelectorAll(".pub-entry");
+const filterButtons = document.querySelectorAll(".pf-btn");
+const publications = document.querySelectorAll(".pub-entry");
 
-filterButtons.forEach(button => {
+filterButtons.forEach(btn => {
 
-  button.addEventListener("click", () => {
+  btn.addEventListener("click", () => {
 
-    /* active button */
-    filterButtons.forEach(btn =>
-      btn.classList.remove("on"));
+    // REMOVE ACTIVE CLASS
+    filterButtons.forEach(b => b.classList.remove("on"));
 
-    button.classList.add("on");
+    // ADD ACTIVE CLASS
+    btn.classList.add("on");
 
-    const filter =
-      button.textContent.trim().toLowerCase();
+    // GET FILTER VALUE
+    const filter = btn.dataset.filter;
 
     publications.forEach(pub => {
 
-      const tags =
-        pub.querySelector(".pub-tags")
-           .innerText
-           .toLowerCase();
+      const type = pub.dataset.type;
 
-      if (
-        filter === "all" ||
-        tags.includes(filter)
-      ) {
+      // SHOW / HIDE
+      if(filter === "all" || type === filter){
         pub.style.display = "grid";
       } else {
         pub.style.display = "none";
@@ -368,6 +362,7 @@ filterButtons.forEach(button => {
   });
 
 });
+
 </script>
 
   <footer class="site-footer">
