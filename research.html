@@ -87,46 +87,52 @@
             segmentation and usefulness for the diagnosis of retinal disorders.</p>
         </div>
         <!-- Image/GIF for this area -->
-        <script>
-
-        const slider = document.getElementById("slider");
-        const overlay = document.getElementById("overlay");
-        
-        slider.addEventListener("input", () => {
-          overlay.style.width = slider.value + "%";
-        });
-        
-        </script>
-        
         <div class="compare-container">
 
-          <!-- ORIGINAL -->
-          <img src="Original.jpg" alt="Original">
-        
-          <!-- SEGMENTED -->
-          <div class="compare-overlay" id="overlay">
-            <img src="segmented.jpg" alt="Segmented">
-          </div>
-        
-          <!-- LABELS -->
-          <span class="compare-label left">Original</span>
-          <span class="compare-label right">Segmented</span>
-        
-          <!-- SLIDER -->
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value="0"
-            class="compare-slider"
-            id="slider"
+        <!-- ORIGINAL IMAGE -->
+        <img
+          src="Original.jpg"
+          class="compare-img"
+          alt="Original Fundus"
+        >
+      
+        <!-- SEGMENTED IMAGE -->
+        <div class="compare-overlay" id="overlay">
+          <img
+            src="segmented.jpg"
+            class="compare-img"
+            alt="Segmented"
           >
-        
         </div>
       
+        <!-- LABELS -->
+        <span class="compare-label left">Original</span>
+        <span class="compare-label right">Segmented</span>
+      
+        <!-- SLIDER -->
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="compare-slider"
+          id="slider"
+        >
+      
+      </div>
+      
       <p class="img-hint">
-        💡 Drag the slider to reveal the segmented result.
+        💡 Drag the slider to compare original and segmented image.
       </p>
+      
+      <script>
+      const slider = document.getElementById("slider");
+      const overlay = document.getElementById("overlay");
+      
+      slider.addEventListener("input", function () {
+          overlay.style.width = this.value + "%";
+      });
+      </script>
 
       <div class="research-area">
         <div class="ra-header">
