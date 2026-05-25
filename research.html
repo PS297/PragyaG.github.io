@@ -88,16 +88,12 @@
         </div>
         <!-- Image/GIF for this area -->
         <script>
-
-        const slider = document.querySelector(".compare-slider");
-        const overlay = document.querySelector(".compare-overlay");
+        const slider = document.getElementById("slider");
+        const overlay = document.getElementById("overlay");
         
-        slider.addEventListener("input", function(){
-        
-          overlay.style.width = this.value + "%";
-        
+        slider.addEventListener("input", () => {
+          overlay.style.width = slider.value + "%";
         });
-        
         </script>
         <div class="compare-container">
 
