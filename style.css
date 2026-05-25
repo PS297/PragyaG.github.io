@@ -279,70 +279,60 @@ img { max-width: 100%; height: auto; display: block; }
 
 .compare-container{
   position: relative;
-
   width: 100%;
-  max-width: 1000px;
-
-  height: 520px;
-
-  margin: 1.5rem auto;
+  max-width: 900px;
+  height: 500px;
+  margin: auto;
 
   overflow: hidden;
 
-  border-radius: 14px;
-  border: 2px solid var(--border);
+  border-radius: 12px;
+  border: 2px solid #ddd;
 
   background: #000;
 }
 
-/* BASE IMAGE (ORIGINAL) */
+/* ORIGINAL IMAGE */
 .compare-container > img{
-  position: absolute;
-  inset: 0;
-
   width: 100%;
   height: 100%;
 
   object-fit: contain;
-  object-position: center;
 
-  z-index: 1;
+  display: block;
 }
 
-/* OVERLAY AREA */
+/* OVERLAY */
 .compare-overlay{
   position: absolute;
+
   top: 0;
   left: 0;
 
-  width: 0%;            /* starts hidden */
+  width: 0%;
   height: 100%;
 
   overflow: hidden;
-
-  z-index: 2;
 
   border-right: 3px solid #fff;
 }
 
 /* SEGMENTED IMAGE */
 .compare-overlay img{
-  position: absolute;
-  inset: 0;
-
   width: 100%;
   height: 100%;
 
   object-fit: contain;
-  object-position: center;
+
+  display: block;
 }
 
 /* SLIDER */
 .compare-slider{
   position: absolute;
 
+  bottom: 15px;
   left: 50%;
-  bottom: 18px;
 
   transform: translateX(-50%);
 
@@ -351,8 +341,6 @@ img { max-width: 100%; height: auto; display: block; }
   z-index: 10;
 
   cursor: pointer;
-
-  accent-color: var(--teal);
 }
 
 /* LABELS */
@@ -361,16 +349,14 @@ img { max-width: 100%; height: auto; display: block; }
 
   top: 15px;
 
-  padding: .4rem .9rem;
-
-  border-radius: 30px;
-
   background: rgba(0,0,0,.6);
+  color: white;
 
-  color: #fff;
+  padding: .4rem .8rem;
+
+  border-radius: 20px;
 
   font-size: .75rem;
-  font-weight: 600;
 
   z-index: 20;
 }
@@ -381,15 +367,6 @@ img { max-width: 100%; height: auto; display: block; }
 
 .compare-label.right{
   right: 15px;
-}
-
-/* MOBILE */
-@media (max-width: 768px){
-
-  .compare-container{
-    height: 320px;
-  }
-
 }
 /* ═══════ PUBLICATIONS PAGE ═══════ */
 .pub-filter { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: 2rem; }
