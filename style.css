@@ -277,92 +277,83 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ═══════ IMAGE COMPARISON SLIDER ═══════ */
 
-/* ===== IMAGE COMPARISON ===== */
+/* ═══════ IMAGE COMPARISON SLIDER ═══════ */
 
 .compare-container{
   position: relative;
-
   width: 100%;
   max-width: 850px;
+  height: 420px;
 
-  height: 380px;   /* reduced height */
-
-  margin: 0 auto;
+  margin: 1.5rem auto;
 
   overflow: hidden;
-
   border-radius: 12px;
   border: 2px solid var(--border);
 
-  background: white;   /* removed black background */
+  background: #111;
 }
 
 /* BOTH IMAGES */
-.compare-container img{
+.compare-img{
+  position: absolute;
+  inset: 0;
+
   width: 100%;
   height: 100%;
 
-  object-fit: cover;   /* removes side black areas */
-
-  display: block;
+  object-fit: contain;
 }
 
 /* OVERLAY */
 .compare-overlay{
   position: absolute;
-
   top: 0;
   left: 0;
 
-  width: 0%;
+  width: 50%;
   height: 100%;
 
   overflow: hidden;
-
   z-index: 2;
 
-  border-right: 3px solid white;
+  border-right: 3px solid #fff;
 }
 
-/* IMPORTANT */
+/* SEGMENTED IMAGE INSIDE OVERLAY */
 .compare-overlay img{
-  width: 850px;   /* SAME as container max-width */
-  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* SLIDER */
 .compare-slider{
   position: absolute;
-
   bottom: 15px;
   left: 50%;
 
   transform: translateX(-50%);
 
   width: 90%;
-
   z-index: 20;
 
   cursor: pointer;
-
-  accent-color: var(--teal);
 }
 
 /* LABELS */
 .compare-label{
   position: absolute;
-
   top: 15px;
 
   padding: .35rem .8rem;
-
   border-radius: 20px;
-
-  font-size: .75rem;
-  font-weight: 600;
 
   background: rgba(0,0,0,.6);
   color: white;
+
+  font-size: .75rem;
+  font-weight: 600;
 
   z-index: 25;
 }
