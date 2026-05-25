@@ -95,32 +95,28 @@
           overlay.style.width = slider.value + "%";
         });
         </script>
-        <div class="ra-media">
-
         <div class="compare-container">
+
+        <!-- ORIGINAL -->
+        <img src="Retinal_1.png" alt="Original">
       
-          <!-- LABELS -->
-          <span class="compare-label left">Original</span>
-          <span class="compare-label right">Segmented</span>
-      
-          <!-- ORIGINAL IMAGE -->
-          <img src="Retinal_1.png" alt="Original">
-      
-          <!-- SEGMENTED OVERLAY -->
-          <div class="compare-overlay">
-            <img src="Retinal_2.png" alt="Segmented">
-          </div>
-      
-          <!-- SLIDER -->
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value="0"
-            class="compare-slider"
-          >
-      
+        <!-- SEGMENTED -->
+        <div class="compare-overlay">
+          <img src="Retinal_2.png" alt="Segmented">
         </div>
+      
+        <!-- LABELS -->
+        <span class="compare-label left">Original</span>
+        <span class="compare-label right">Segmented</span>
+      
+        <!-- SLIDER -->
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          class="compare-slider"
+        >
       
       </div>
       
