@@ -293,15 +293,15 @@ img { max-width: 100%; height: auto; display: block; }
 
   border-radius: 16px;
 
-  border: 2px solid var(--border);
+  border: 2px solid #222;
 
   background:
-    radial-gradient(circle at center,
-    #1f2937 0%,
-    #111827 100%);
+  radial-gradient(circle at center,
+  #0a0a0a 0%,
+  #000000 100%);
 
   box-shadow:
-    0 10px 35px rgba(0,0,0,.18);
+    0 10px 35px rgba(0,0,0,.4);
 }
 
 /* BOTH IMAGES */
