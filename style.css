@@ -855,3 +855,25 @@ img { max-width: 100%; height: auto; display: block; }
   background:#111;
   color:#fff;
 }
+
+/* ═══════ RESPONSIVE ═══════ */
+@media (max-width: 900px) {
+  .content-cols { grid-template-columns: 1fr; }
+  .col-side { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .main-nav { display: none; }
+  .burger { display: block; margin-left: auto; }
+  .hero-content { flex-direction: column; align-items: center; text-align: center; }
+  .hero-tags, .hero-links { justify-content: center; }
+  .gif-grid, .ra-media { grid-template-columns: 1fr; }
+  .col-side { grid-template-columns: 1fr; }
+  .pub-entry { grid-template-columns: 1fr; }
+  .pub-thumb-slot { display: none; }
+}
+@media (max-width: 480px) {
+  .page-main, .page-single { padding: 0 1rem 3rem; }
+  .header-inner { padding: 0 1rem; }
+  .hero-banner { padding: 2rem 1rem; }
+} at the end I have this
