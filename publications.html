@@ -299,6 +299,77 @@ Automated Learning (IDEAL 2025)</em></div>
 
   </main>
 
+  <script>
+/* =========================
+   ABSTRACT TOGGLE
+========================= */
+
+document.querySelectorAll(".abstract-toggle").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const abstract =
+      button.nextElementSibling;
+
+    abstract.classList.toggle("show");
+
+    if (abstract.classList.contains("show")) {
+      button.innerHTML = "▲ Hide abstract";
+    } else {
+      button.innerHTML = "▼ Show abstract";
+    }
+
+  });
+
+});
+
+
+/* =========================
+   PUBLICATION FILTER
+========================= */
+
+const filterButtons =
+  document.querySelectorAll(".pf-btn");
+
+const publications =
+  document.querySelectorAll(".pub-entry");
+
+filterButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    /* active button */
+    filterButtons.forEach(btn =>
+      btn.classList.remove("on"));
+
+    button.classList.add("on");
+
+    const filter =
+      button.textContent.trim().toLowerCase();
+
+    publications.forEach(pub => {
+
+      const tags =
+        pub.querySelector(".pub-tags")
+           .innerText
+           .toLowerCase();
+
+      if (
+        filter === "all" ||
+        tags.includes(filter)
+      ) {
+        pub.style.display = "grid";
+      } else {
+        pub.style.display = "none";
+      }
+
+    });
+
+  });
+
+});
+</script>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <span>© 2026 Pragya Gupta · <a href="index.html">Home</a></span>
