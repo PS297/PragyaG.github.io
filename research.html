@@ -88,37 +88,41 @@
         </div>
         <!-- Image/GIF for this area -->
         <script>
+
         const slider = document.getElementById("slider");
         const overlay = document.getElementById("overlay");
         
         slider.addEventListener("input", () => {
           overlay.style.width = slider.value + "%";
         });
+        
         </script>
+        
         <div class="compare-container">
 
-        <!-- ORIGINAL -->
-        <img src="Original.jpg" alt="Original">
-      
-        <!-- SEGMENTED -->
-        <div class="compare-overlay">
-          <img src="segmented.jpg" alt="Segmented">
+          <!-- ORIGINAL -->
+          <img src="Original.jpg" alt="Original">
+        
+          <!-- SEGMENTED -->
+          <div class="compare-overlay" id="overlay">
+            <img src="segmented.jpg" alt="Segmented">
+          </div>
+        
+          <!-- LABELS -->
+          <span class="compare-label left">Original</span>
+          <span class="compare-label right">Segmented</span>
+        
+          <!-- SLIDER -->
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="compare-slider"
+            id="slider"
+          >
+        
         </div>
-      
-        <!-- LABELS -->
-        <span class="compare-label left">Original</span>
-        <span class="compare-label right">Segmented</span>
-      
-        <!-- SLIDER -->
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value="0"
-          class="compare-slider"
-        >
-      
-      </div>
       
       <p class="img-hint">
         💡 Drag the slider to reveal the segmented result.
