@@ -300,6 +300,8 @@ Automated Learning (IDEAL 2025)</em></div>
   </main>
 
   <script>
+<script>
+
 /* =========================
    ABSTRACT TOGGLE
 ========================= */
@@ -308,8 +310,7 @@ document.querySelectorAll(".abstract-toggle").forEach(button => {
 
   button.addEventListener("click", () => {
 
-    const abstract =
-      button.nextElementSibling;
+    const abstract = button.nextElementSibling;
 
     abstract.classList.toggle("show");
 
@@ -328,8 +329,6 @@ document.querySelectorAll(".abstract-toggle").forEach(button => {
    PUBLICATION FILTER
 ========================= */
 
-<script>
-
 const filterButtons = document.querySelectorAll(".pf-btn");
 const publications = document.querySelectorAll(".pub-entry");
 
@@ -337,21 +336,20 @@ filterButtons.forEach(btn => {
 
   btn.addEventListener("click", () => {
 
-    // REMOVE ACTIVE CLASS
+    // REMOVE ACTIVE BUTTON
     filterButtons.forEach(b => b.classList.remove("on"));
 
-    // ADD ACTIVE CLASS
+    // ADD ACTIVE BUTTON
     btn.classList.add("on");
 
-    // GET FILTER VALUE
+    // GET FILTER
     const filter = btn.dataset.filter;
 
     publications.forEach(pub => {
 
       const type = pub.dataset.type;
 
-      // SHOW / HIDE
-      if(filter === "all" || type === filter){
+      if (filter === "all" || type === filter) {
         pub.style.display = "grid";
       } else {
         pub.style.display = "none";
